@@ -6,6 +6,10 @@
 
 * [Alveo FAQ](faq.md)
 
+## Xilinx Community Forum
+
+* [Alveo Data Center Accelerator Cards](https://forums.xilinx.com/t5/Alveo-Data-Center-Accelerator/bd-p/alveo)
+
 ## JARVICE Support
 
 For assistance with the JARVICE platform, refer to:
