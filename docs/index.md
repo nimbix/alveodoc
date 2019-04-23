@@ -1,17 +1,17 @@
-# Welcome to MkDocs
+# Welcome to Alveo support page
 
-For full documentation visit [mkdocs.org](https://mkdocs.org).
+ This page contains supporting information for the [Xilinx Alveo](https://www.nimbix.net/alveo/) accelerators available on the [JARVICE](https://www.nimbix.net/platform/) platform.
 
-## Commands
+## Resources
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+* [Alveo FAQ](faq.md)
 
-## Project layout
+## JARVICE Support
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+For assistance with the JARVICE platform, refer to:
+
+* [JARVICE documentation](https://jarvice.readthedocs.io/en/latest/)
+* [NIMBIX support](https://nimbix.zendesk.com/hc/en-us)
+* support@nimbix.net
+
+

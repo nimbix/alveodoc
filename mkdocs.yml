@@ -1,1 +1,7 @@
-site_name: My Docs
+site_name: Alveo
+theme: readthedocs
+extra_css:
+    - css/extra.css
+pages:
+    - Home: index.md
+    - Alveo FAQ: faq.md
