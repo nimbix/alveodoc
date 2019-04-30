@@ -1,6 +1,6 @@
 # Welcome to Alveo support page
 
- This page contains supporting information for the [Xilinx Alveo](https://www.nimbix.net/alveo/) accelerators available on the [JARVICE](https://www.nimbix.net/platform/) platform.
+ This page contains supporting information for the [Xilinx Alveo](https://www.nimbix.net/alveo/) Accelerator Cards available on the [JARVICE™](https://www.nimbix.net/platform/) platform.
 
 ## Resources
 
