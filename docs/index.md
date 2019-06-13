@@ -4,6 +4,9 @@
 
 ## Resources
 
+* [Getting Started with SDAccel](sdaccel.md)
+* [Alveo resources on the NIMBIX cloud](boards.md)
+* [Alveo applications on the NIMBIX cloud](apps.md)
 * [Alveo FAQ](faq.md)
 
 ## Xilinx Community Forum
