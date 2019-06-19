@@ -4,6 +4,7 @@ extra_css:
     - css/extra.css
 pages:
     - Home: index.md
+    - Getting started with SDAccel: sdaccel.md
     - Alveo Accelerators on NIMBIX cloud: boards.md
     - Alveo Applications on NIMBIX cloud: apps.md
     - PushToCompute flow for Xilinx Runtime: pushtocompute.md
