@@ -17,7 +17,7 @@ This page will ues a simple example to walkthrough the SDAccel tools and runtime
 1. Sign up for [Alveo Trial](https://www.nimbix.net/alveotrial/)
 2. Login to the [JARVICE portal for Xilinx](https://xilinx-cloud.jarvice.com/)
 3. Review the JARVICE environment:
-    * [JARVICE Runtime Directories](https://jarvice.readthedocs.io/en/latest/nae/#runtime-directories-and-files)
+    * [JARVICE Runtime Directories](https://jarvice.readthedocs.io/en/latest/nae/#runtime-directories-and-files)<br>**NOTE:** Only data in a user's vault is persistent between jobs. NIMBIX recommends using `/tmp` for best I/O performance (resulting data must be copied back to your vault before terminating the job). Please refer to `JARVICE Runtime Directories` for additional information
     * [Transferring Data](https://nimbix.zendesk.com/hc/en-us/articles/115004155683-How-to-Transfer-Data-to-and-from-Nimbix)
     * [Onboarding](https://nimbix.zendesk.com/hc/en-us/categories/115000891926-Onboarding)
 4. Click on `Xilinx SDAccel Development & Alveo FPGA 2018.3` application
@@ -48,8 +48,11 @@ Like most accelerators, there are separate binaries for the host software and ac
 1. Open a terminal
 2. Compile kernel for sw emulation
 ```bash
+# Create local build directory in /tmp
+TMP_WORK_DIR=$(mktemp -d)
+# Compile for SW emulation
 cd /data/SDAccel_Examples/getting_started/hello_world/helloworld_c
-make all TARGET=sw_emu DEVICE=xilinx_u200_xdma_201830_1
+make all BUILD_DIR=${TMP_WORK_DIR} TARGET=sw_emu DEVICE=xilinx_u200_xdma_201830_1
 ```
 ### Run test with software emulator
 ```bash
@@ -72,7 +75,7 @@ emconfigutil --platform xilinx_u200_xdma_201830_1 --nd 1
 
 3. Fill in the `Command` box with:
 ```bash
-make -C /data/SDAccel_Examples/getting_started/hello_world/helloworld_c all TARGET=hw DEVICE=xilinx_u200_xdma_201830_1
+TMP_WORK_DIR=$(mktemp -d) && make -C /data/SDAccel_Examples/getting_started/hello_world/helloworld_c all BUILD_DIR=${TMP_WORK_DIR} TARGET=hw DEVICE=xilinx_u200_xdma_201830_1
 ```
 
    ![SDAccel Batch](sdaccel-batch.png)
