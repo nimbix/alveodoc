@@ -31,8 +31,9 @@ The following script will create a simple base XRT application. Save this locall
 DOCKER_TAG=${1:-xrt-test}
 OS_DIST=${2:-16.04}
 BASE_IMAGE=${3:-ubuntu:xenial}
+XILINX_RELEASE=${4:-201920.2.3.1301}
 
-XRT_RUNTIME=xrt_201830.2.1.1712_${OS_DIST}-xrt.deb
+XRT_RUNTIME=xrt_${XILINX_RELEASE}_${OS_DIST}-xrt.deb
 # Create an AppDef for JARVICE
 # Server command will start gotty via /sbin/init
 cat << EOF > AppDef.json
@@ -47,8 +48,7 @@ cat << EOF > AppDef.json
         "Alveo"
     ],
     "machines": [
-        "nx5u_xdma_201830_1",
-        "nx6u_xdma_201830_1"
+        "nx*u*"
     ],
     "vault-types": [
         "FILE",
@@ -129,8 +129,9 @@ Follow the same steps in [Minimal Ubuntu 16.04 XRT](#minimal-ubuntu-xenial-xrt) 
 DOCKER_TAG=${1:-xrt-test}
 OS_DIST=${2:-18.04}
 BASE_IMAGE=${3:-ubuntu:bionic}
+XILINX_RELEASE=${4:-201920.2.3.1301}
 
-XRT_RUNTIME=xrt_201830.2.1.1712_${OS_DIST}-xrt.deb
+XRT_RUNTIME=xrt_${XILINX_RELEASE}_${OS_DIST}-xrt.deb
 # Create an AppDef for JARVICE
 # Server command will start gotty via /sbin/init
 cat << EOF > AppDef.json
@@ -145,8 +146,7 @@ cat << EOF > AppDef.json
         "Alveo"
     ],
     "machines": [
-        "nx5u_xdma_201830_1",
-        "nx6u_xdma_201830_1"
+        "nx*u*"
     ],
     "vault-types": [
         "FILE",
@@ -192,8 +192,9 @@ Follow the same steps in [Minimal Ubuntu 16.04 XRT](#minimal-ubuntu-xenial-xrt) 
 DOCKER_TAG=${1:-xrt-test}
 OS_DIST=${2:-7.4.1708}
 BASE_IMAGE=${3:-centos:7.4.1708}
+XILINX_RELEASE=${4:-201920.2.3.1301}
 
-XRT_RUNTIME=xrt_201830.2.1.1712_${OS_DIST}-xrt.rpm
+XRT_RUNTIME=xrt_${XILINX_RELEASE}_${OS_DIST}-xrt.rpm
 # Create an AppDef for JARVICE
 # Server command will start gotty via /sbin/init
 cat << EOF > AppDef.json
@@ -208,8 +209,7 @@ cat << EOF > AppDef.json
         "Alveo"
     ],
     "machines": [
-        "nx5u_xdma_201830_1",
-        "nx6u_xdma_201830_1"
+        "nx*u*"
     ],
     "vault-types": [
         "FILE",
@@ -256,8 +256,8 @@ Build the Docker image and push to your Docker Registry:
 
 ```
 docker build -t xrt-test ${PWD}
-docker tag xrt-test ${DOCKER_USER}/xrt-test:minimal
-docker push ${DOCKER_USER}/xrt-test:minimal
+docker tag xrt-test ${DOCKER_USER}/xrt-test:desktop
+docker push ${DOCKER_USER}/xrt-test:desktop
 ```
 
 [Create your new JARVICE App](#create-a-new-jarvice-application-with-pushtocompute)
