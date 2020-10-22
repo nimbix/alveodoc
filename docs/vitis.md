@@ -14,29 +14,28 @@ This page will use a simple example to walkthrough the Vitis tools and runtime a
 
 ### Start new Vitis Accel session on JARVICE
 
-1. Sign up for [Alveo Trial](https://www.nimbix.net/alveotrial/)
-2. Login to the [JARVICE portal for Xilinx](https://xilinx-cloud.jarvice.com/)
-3. Review the JARVICE environment:
+1. Login to the [JARVICE portal for Xilinx](https://xilinx-cloud.jarvice.com/)
+2. Review the JARVICE environment:
     * [JARVICE Runtime Directories](https://jarvice.readthedocs.io/en/latest/nae/#runtime-directories-and-files)<br>**NOTE:** Only data in a user's vault is persistent between jobs. NIMBIX recommends using `/tmp` for best I/O performance (resulting data must be copied back to your vault before terminating the job). Please refer to `JARVICE Runtime Directories` for additional information
     * [Transferring Data](https://nimbix.zendesk.com/hc/en-us/articles/115004155683-How-to-Transfer-Data-to-and-from-Nimbix)
     * [Onboarding](https://nimbix.zendesk.com/hc/en-us/categories/115000891926-Onboarding)
-4. Click on `Xilinx Vitis Unified Software Platform 2019.2` application
+3. Click on `Xilinx Vitis Unified Software Platform 2019.2` application
 
     ![Vitis App](vitis-app.png)
 
-5. Select the `Desktop Mode Without FPGA` option
+4. Select the `Desktop Mode Without FPGA` option
 
     ![Vitis Workflows](vitis-workflow.png)
 
-6. `SUBMIT` the job.
-7. Click on the Desktop Preview to join the Vitis session
+5. `SUBMIT` the job.
+6. Click on the Desktop Preview to join the Vitis session
 
     ![Vitis connect](vitis-connect.png)
 
 ### Clone Vitis Accel Examples for 2019.2
 
-8. Open terminal
-9. Clone `Hello World` into your vault
+7. Open terminal
+8. Clone `Hello World` into your vault
 ```bash
 git clone --depth=1 https://github.com/Xilinx/Vitis_Accel_Examples /data/Vitis_Accel_Examples
 ```  
@@ -107,9 +106,4 @@ cd /data/Vitis_Accel_Examples/hello_world
 ### Shutdown Vitis Accel
 
    ![Vitis Shutdown](vitis-shutdown.png)
-
-# Alveo Trial for NIMBIX cloud
-
-Register for [Alveo trial](https://www.nimbix.net/alveotrial/) using company or university email
-
 

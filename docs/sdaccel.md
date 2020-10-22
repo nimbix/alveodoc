@@ -14,29 +14,28 @@ This page will ues a simple example to walkthrough the SDAccel tools and runtime
 
 ### Start new SDAccel session on JARVICE
 
-1. Sign up for [Alveo Trial](https://www.nimbix.net/alveotrial/)
-2. Login to the [JARVICE portal for Xilinx](https://xilinx-cloud.jarvice.com/)
-3. Review the JARVICE environment:
+1. Login to the [JARVICE portal for Xilinx](https://xilinx-cloud.jarvice.com/)
+2. Review the JARVICE environment:
     * [JARVICE Runtime Directories](https://jarvice.readthedocs.io/en/latest/nae/#runtime-directories-and-files)<br>**NOTE:** Only data in a user's vault is persistent between jobs. NIMBIX recommends using `/tmp` for best I/O performance (resulting data must be copied back to your vault before terminating the job). Please refer to `JARVICE Runtime Directories` for additional information
     * [Transferring Data](https://nimbix.zendesk.com/hc/en-us/articles/115004155683-How-to-Transfer-Data-to-and-from-Nimbix)
     * [Onboarding](https://nimbix.zendesk.com/hc/en-us/categories/115000891926-Onboarding)
-4. Click on `Xilinx SDAccel Development & Alveo FPGA 2018.3` application
+3. Click on `Xilinx SDAccel Development & Alveo FPGA 2018.3` application
 
     ![SDAccel App](sdaccel-app.png)
 
-5. Select the `Desktop Mode Without FPGA` option
+4. Select the `Desktop Mode Without FPGA` option
 
     ![SDAccel Workflows](sdx-workflow.png)
 
-6. `SUBMIT` the job.
-7. Click on the Desktop Preview to join the SDAccel session
+5. `SUBMIT` the job.
+6. Click on the Desktop Preview to join the SDAccel session
 
     ![SDAccel connect](sdaccel-connect.png)
 
 ### Clone SDAccel Examples for 2018.3
 
-8. Open terminal
-9. Clone `Hello World` into your vault
+7. Open terminal
+8. Clone `Hello World` into your vault
 ```bash
 git clone --branch 2018.3 --depth=1 https://github.com/Xilinx/SDAccel_Examples /data/SDAccel_Examples
 ```  
@@ -107,9 +106,4 @@ cd /data/SDAccel_Examples/getting_started/hello_world/helloworld_c
 ### Shutdown SDAccel
 
    ![SDAccel Shutdown](sdaccel-shutdown.png)
-
-# Alveo Trial for NIMBIX cloud
-
-Register for [Alveo trial](https://www.nimbix.net/alveotrial/) using company or university email
-
 

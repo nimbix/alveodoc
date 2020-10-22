@@ -4,7 +4,6 @@
 
 ## Resources
 
-* [Alveo Trial for NIMBIX cloud](https://www.nimbix.net/alveotrial/)
 * [Getting Started with Vitis Accel](vitis.md)
 * [Alveo resources on the NIMBIX cloud](boards.md)
 * [Alveo applications on the NIMBIX cloud](apps.md)
